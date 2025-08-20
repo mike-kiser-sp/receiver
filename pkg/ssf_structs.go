@@ -112,9 +112,10 @@ type TransmitterConfig struct {
 
 // Struct used to make a Create Stream request for the receiver
 type CreateStreamReq struct {
-	Delivery        SsfDelivery `json:"delivery"`
-	EventsRequested []string    `json:"events_requested"`
-	Description     string      `json:"description,omitempty"`
+	Delivery            SsfDelivery `json:"delivery"`
+	EventsRequested     []string    `json:"events_requested"`
+	Description         string      `json:"description,omitempty"`
+	AuthorizationHeader string      `json:"authorization_header,omitempty"`
 }
 
 // Struct used to make a Create Stream request for the receiver
