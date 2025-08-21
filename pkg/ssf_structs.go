@@ -112,10 +112,9 @@ type TransmitterConfig struct {
 
 // Struct used to make a Create Stream request for the receiver
 type CreateStreamReq struct {
-	Delivery            SsfDelivery `json:"delivery"`
-	EventsRequested     []string    `json:"events_requested"`
-	Description         string      `json:"description,omitempty"`
-	AuthorizationHeader string      `json:"authorization_header,omitempty"`
+	Delivery        SsfDelivery `json:"delivery"`
+	EventsRequested []string    `json:"events_requested"`
+	Description     string      `json:"description,omitempty"`
 }
 
 // Struct used to make a Create Stream request for the receiver
@@ -128,8 +127,9 @@ type PatchStreamReq struct {
 
 // Struct that defines the deliver method for the Create Stream Request
 type SsfDelivery struct {
-	DeliveryMethod string `json:"method"`
-	EndpointUrl    string `json:"endpoint_url,omitempty"`
+	DeliveryMethod      string `json:"method"`
+	EndpointUrl         string `json:"endpoint_url,omitempty"`
+	AuthorizationHeader string `json:"authorization_header,omitempty"`
 }
 
 // Struct to make a request to poll SSF Events to the
