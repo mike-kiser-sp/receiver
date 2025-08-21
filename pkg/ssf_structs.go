@@ -185,7 +185,7 @@ var EnumToStringStatusMap = map[StreamStatus]string{
 type StreamStatusResponse struct {
 	StreamId string `json:"stream_id"`
 	Status   string `json:"status"`
-	Reason   string `json:"reason"`
+	Reason   string `json:"reason,omitempty"`
 }
 
 type StreamConfig struct {
